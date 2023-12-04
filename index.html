@@ -3,111 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahaweli Authority Landing Page</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(45deg, #8e44ad, #2980b9);
-            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        header {
-           
-            text-align: center;
-        }
+        .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
 
-        section {
-          
-            text-align: center;
-        }
-
-        .card_one {
-            background: #cfffd5;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            margin: auto;
-            text-align: left;
-        }
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            margin: auto;
-            text-align: left;
-        }
-
-        button {
-           border-radius: 15px;
-           background-color: #8e44ad;
-            color: #fff;
+        .contact-card1 {
+            width: 350px;
+            height: 100px;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
+        }
+        .contact-card {
+            width: 340px;
+            height: 85px;
+            border: none;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
+        }
+
+        .contact-details {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .contact-image-container {
+            width: 50px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .contact-image1 {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            
+            
+        }
+        .contact-image2 {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 50%;
+            
+            
+        }
+        .contact-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 13px;
+            font-weight: bold;
             margin-top: 10px;
-            transition: background 0.5s ease;
-            width:100%;
         }
-        h3,p,h2{
-        color: black;
-      
+
+        .job-title {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
         }
+
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            align-items: flex-end; /* Align buttons to the right */
+            padding: 10px;
+        }
+
+        .call-button {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color: rgb(60, 60, 148);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            font-size: x-small;
+        }
+        .call-button2 {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color:orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            font-size: x-small;
+        }
+
+
+        p {
+            color: gray;
+            font-size: x-small;
+        }
+        .disgnation{
+            font-size: x-small;
+            color: gray;
+        }
+        .st2{
+            color: gray;
+        }
+       
     </style>
 </head>
 <body>
 
-    <section>
-        <h1>PLANNING AND MONITORING UNIT</h1>
-        <!-- User Card -->
-
-
-        <div class="card_one">
-            <h2>PLANNING AND MONITORING UNIT</h2>
-            <h2>06 Floor</h2>
-            <p style="color: gray;">office line contact center</p>
-            <p>Fax: <span id="a">011-2687498</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">None</span></p>
-            <p>Call Landline: <span id="a_land_line">011-2698957</span></p>
-            <p>Call Mobile: <span id="">None</span></p>
-            <p>Email Line One: <span id="email_one">pmumasl@gmail.com</span></p>
-            <!-- Buttons -->
-            <button onclick="callNumber('pmu_land_line')">Call Landline</button>
-            <button onclick="openEmailApp_one()">Send Email</button>
- 
-
+    
+    <div class="contact-container">
+        <h3 style="text-align:center;"><b>PLANNING AND MONITORING UNIT</b><br><span class="st2">Floor No : 06 </span></h3>
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image1" src="2.png" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">OFFICE<br>
+                       
+                        <p>
+                         LandLine : <span id="pmu_land">011-2698957</span><br>
+                         Email : <span id="email_one">pmumasl@gmail.com</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('pmu_land')"> Call LandLine</button>
+                <button class="call-button2"  onclick="openEmailApp_one()">Send Email</button>
+            </div>
             <script>
-                function openEmailApp_one() {
+                 function openEmailApp_one() {
                     var email_one = document.getElementById('email_one').textContent;
                     window.location.href = 'mailto:' + email_one;
                 }
-
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
                     window.location.href = prefix + document.getElementById(number).textContent;
                 }
             </script>
         </div>
-        <hr>
 
 
-        <div class="card">
-            <h2>Mr. Lanka Bandara Senaratna </h2>
-            <p style="color: gray;">Designation:Director(Planning & Monitoring) </p>
-            <p>Fax: <span id="">011- 2687498</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">332</span></p>
-            <p>Call Landline: <span id="dpmu_land_line_one">011-2698957</span></p>
-            <p>Call Mobile: <span id="dpmu_mobile_line">071-4447745</span></p>
 
-            <!-- Buttons -->
-            <button onclick="callNumber('dpmu_land_line_one')">Call Landline 01</button>
-            <button onclick="callNumber('dpmu_mobile_line', true)">Call Mobile</button>
-
+        <!-- Add another card below -->
+       
+      
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Lanka Bandara Senaratna<br>
+                        <span class="disgnation">Director(Planning & Monitoring)</span><br>
+                        <p>
+                         In.Com: <span id="">332</span><br> 
+                         LandLine : <span id="dpmu_land">011-2698957</span><br>
+                         Mobile : <span id="dpmu_mobile">071-4447745</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dpmu_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('dpmu_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -115,24 +211,116 @@
                 }
             </script>
         </div>
-        <hr>
 
+        <h3 style="text-align:center;"><b>ASSISTANT DIRECTOR(PLANNING & MONITORING UNIT)</b><br><span class="st2"></span></h3>
+
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Prasanna Rajapksha<br>
+                        <span class="disgnation">Assistant Director(Planning & Monitoring)</span><br>
+                        <p>
+                         In.Com: <span id="">336</span><br> 
+                         LandLine : <span id="adpmu_land">011-2697197</span><br>
+                         Mobile : <span id="adpmu_mobile">071-1180460</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('adpmu_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('adpmu_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+        <h3 style="text-align:center;"><b>OTHER OFFICERS</b><br><span class="st2"></span></h3>
+
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.P.N.S.C.Nawaratna<br>
+                        <span class="disgnation">Economist</span><br>
+                        <p>
+                         In.Com: <span id="">335</span><br>
+                         LandLine : <span id="eco_land">011-2639335</span><br> 
+                         Mobile : <span id="eco_mobile">071-8463292</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('eco_land')"> Call LandLine</button>
+                <button class="call-button" onclick="callNumber('eco_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs.P.P.D.N.Kumari<br>
+                        <span class="disgnation">Statistician</span><br>
+                        <p>
+                         In.Com: <span id="">335</span><br> 
+                         LandLine : <span id="st_land">011-2639335</span><br> 
+                         Mobile : <span id="st_mobile">071-5861612</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('st_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('st_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
         
-        <div class="card">
-            <h2>Mr. Prasanna Rajapksha</h2>
-            <p style="color: gray;">Designation: Assistant Director (Planning & Monitoring) </p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">336</span></p>
-            <p>Call Landline: <span id="ad_land_line_one">011-2697197</span></p>
-            <p>Call Mobile line 01: <span id="ad_mobile_line_01">071-1180460</span></p>
-            <p>Call Mobile line 02: <span id="ad_mobile_line_02">077-8217500</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('ad_land_line_one')">Call Landline</button>
-            <button onclick="callNumber('dp_mobile_line_01', true)">Call Mobile Line 01</button>
-            <button onclick="callNumber('dp_mobile_line_02', true)">Call Mobile Line 02</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Miss.Priyanka Sanjeewani<br>
+                        <span class="disgnation">Statistician</span><br>
+                        <p>
+                         In.Com: <span id="">331</span><br> 
+                         LandLine : <span id="st2_land">011-2639331</span><br> 
+                         Mobile : <span id="st2_mobile">071-0644024</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('st2_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('st2_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -140,22 +328,27 @@
                 }
             </script>
         </div>
-        <hr>
 
-
-          
-        <div class="card">
-            <h2>Mr. P.N.S.C. Nawaratna </h2>
-            <p style="color: gray;">Designation:Economist </p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">335</span></p>
-            <p>Call Landline: <span id="e_land_line">011-2639335</span></p>
-            <p>Call Mobile: <span id="e_mobile_line">071-8463292</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('e_land_line')">Call Landline</button>
-            <button onclick="callNumber('e_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.J.A.T.W.C Jayasingha<br>
+                        <span class="disgnation">Progress Monitoring Officer</span><br>
+                        <p>
+                         In.Com: <span id="">338</span><br> 
+                         LandLine : <span id="pmo_land">011-2639338</span><br> 
+                         Mobile : <span id="pmo_mobile">070-3821412</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('pmo_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('pmo_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -163,21 +356,27 @@
                 }
             </script>
         </div>
-        <hr>
 
-
-        <div class="card">
-            <h2>Mrs. P.P.D.N.Kumari </h2>
-            <p style="color: gray;">Designation:Statistician </p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">335</span></p>
-            <p>Call Landline: <span id="st_land_line">011-2639335</span></p>
-            <p>Call Mobile: <span id="st_mobile_line">071-5861612</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('st_land_line')">Call Landline</button>
-            <button onclick="callNumber('st_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs. Kaushalya Vitanage<br>
+                        <span class="disgnation">Progress Monitoring Officer</span><br>
+                        <p>
+                         In.Com: <span id="">331</span><br> 
+                         LandLine : <span id="pmo2_land">011-2639331</span><br> 
+                         Mobile : <span id="pmo2_mobile">071-6037513</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('pmo2_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('pmo2_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -185,21 +384,27 @@
                 }
             </script>
         </div>
-        <hr>
 
-
-        <div class="card">
-            <h2>Miss. Priyanka Sanjeewani </h2>
-            <p style="color: gray;">Designation:Statistician </p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">331</span></p>
-            <p>Call Landline: <span id="st2_land_line">011-2639331</span></p>
-            <p>Call Mobile: <span id="st2_mobile_line">071-0644024</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('st2_land_line')">Call Landline</button>
-            <button onclick="callNumber('st2_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs.Lukshani Geethmala<br>
+                        <span class="disgnation">Project Planning Officer</span><br>
+                        <p>
+                         In.Com: <span id="">338</span><br> 
+                         LandLine : <span id="ppo_land">011-2639338</span><br> 
+                         Mobile : <span id="ppo_mobile">077-1303109</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('ppo_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('ppo_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -207,21 +412,29 @@
                 }
             </script>
         </div>
-        <hr>
 
+        <h3 style="text-align:center;"><b>IT UNIT</b><br><span class="st2"></span></h3>
 
-        <div class="card">
-            <h2>Mr. J.A.T.W.C Jayasingha</h2>
-            <p style="color: gray;">Designation:Progress Monitoring Officer</p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">338</span></p>
-            <p>Call Landline: <span id="pmo_land_line">011-2639338</span></p>
-            <p>Call Mobile: <span id="pmo_mobile_line">070-3821412</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('pmo_land_line')">Call Landline</button>
-            <button onclick="callNumber('pmo_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Amal Taranga<br>
+                        <span class="disgnation">IT Administrator and Computer Programmer </span><br>
+                        <p>
+                         In.Com: <span id="">330</span><br> 
+                         LandLine : <span id="at_land">011-2639330</span><br> 
+                         Mobile : <span id="at_mobile">071-8019020</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('at_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('at_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -229,20 +442,28 @@
                 }
             </script>
         </div>
-        <hr>
 
-        <div class="card">
-            <h2>Mrs. Kaushalya Vitanage </h2>
-            <p style="color: gray;">Designation:Progress Monitoring Officer</p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">331</span></p>
-            <p>Call Landline: <span id="pmo2_land_line">011-2639331</span></p>
-            <p>Call Mobile: <span id="pmo2_mobile_line">071-6037513</span></p>
 
-            <!-- Buttons -->
-            <button onclick="callNumber('pmo2_land_line')">Call Landline</button>
-            <button onclick="callNumber('pmo2_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Pradeep Tharaka<br>
+                        <span class="disgnation">IT Administrator and Computer Programmer </span><br>
+                        <p>
+                         In.Com: <span id="">None</span><br> 
+                         LandLine : <span id="pt_land">011-2639330</span><br> 
+                         Mobile : <span id="pt_mobile">077-8196064</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('pt_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('pt_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -250,21 +471,28 @@
                 }
             </script>
         </div>
-        <hr>
 
 
-        <div class="card">
-            <h2>Mrs. Lukshani Geethmala</h2>
-            <p style="color: gray;">Designation:Project Planning Officer</p>
-            <p>Fax: <span id="">None</span></p>
-            <p style="font-weight: bold;">In Com: <span id="a">338</span></p>
-            <p>Call Landline: <span id="ppo_land_line">011-2639338</span></p>
-            <p>Call Mobile: <span id="ppo_mobile_line">077-1303109</span></p>
-
-            <!-- Buttons -->
-            <button onclick="callNumber('ppo_land_line')">Call Landline</button>
-            <button onclick="callNumber('ppo_mobile_line', true)">Call Mobile</button>
-
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Type Name Here<br>
+                        <span class="disgnation">Network Administrator</span><br>
+                        <p>
+                         In.Com: <span id="">None</span><br> 
+                         LandLine : <span id="pt_land">text</span><br> 
+                         Mobile : <span id="pt_mobile">text</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('pt_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('pt_mobile')">Call Mobile</button>
+            </div>
             <script>
                 function callNumber(number, isMobile = false) {
                     var prefix = isMobile ? 'tel:' : 'tel:';
@@ -272,14 +500,69 @@
                 }
             </script>
         </div>
-        <hr>
 
 
-        <!-- More content goes here -->
-        <footer>
-            <p style="color: white; font-size: small;">Developmet & Publish by Department of IT <br> Mahaweli Authority Of Sri Lanaka </p>
-            <p style="color: white; font-size: xx-small;">copyright 2023 All Right Resived By Mahaweli Authority</p>
-        </footer>
-    </section>
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs.Thilini Udenika<br>
+                        <span class="disgnation">IT Administrator and Computer Programmer </span><br>
+                        <p>
+                         In.Com: <span id="">334</span><br> 
+                         LandLine : <span id="tu_land">011-2639330</span><br> 
+                         Mobile : <span id="tu_mobile">076-6819062</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('tu_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('tu_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+        <h3 style="text-align:center;"><b>IT UNIT</b><br><span class="st2"></span></h3>
+
+
+        <div class="contact-card1">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image2" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs.Dilmini Mangala<br>
+                        <span class="disgnation">Librarian</span><br>
+                        <p>
+                         In.Com: <span id="">340</span><br> 
+                         LandLine : <span id="dm_land">011-2639340</span><br> 
+                         Mobile : <span id="dm_mobile">0777-893922</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('dm_land')">Call LandLine</button>
+                <button class="call-button" onclick="callNumber('dm_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+
+
+    </div>
+
 </body>
 </html>
